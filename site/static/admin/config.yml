@@ -1,5 +1,6 @@
 backend:
   name: git-gateway
+  branch: master # Branch to update (optional; defaults to master)
 
 media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
@@ -12,7 +13,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Weight", name: "weight", widget: "string"}
       - {label: "Type", name: "type", widget: "string", widget: "hidden", default: "docs"}
       - {label: "ToC?", name: "bookToc", widget: "boolean"}
       - {label: "Body", name: "body", widget: "markdown"}
@@ -23,7 +24,7 @@ collections: # A list of collections the CMS should be able to edit
     create: true 
     fields: 
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Weight", name: "weight", widget: "string"}
       - {label: "Type", name: "type", widget: "string", widget: "hidden", default: "posts"}
       - {label: "Body", name: "body", widget: "markdown"}
     
