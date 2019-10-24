@@ -8,19 +8,22 @@ collections: # A list of collections the CMS should be able to edit
   - name: "guidelines" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Guideline" # Used in the UI, ie.: "New Post"
     folder: "site/content/guidelines" # The path to the folder where the documents are stored
+    filter: {field: "type", value: "docs"}
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Weight", name: "weight", widget: "string"}
-      - {label: "Type", name: "type", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Type", name: "type", widget: "string", widget: "hidden", default: "docs"}
       - {label: "ToC?", name: "bookToc", widget: "boolean"}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "updates"
     label: "Updates"
     folder: "site/content/updates" 
+    filter: {field: "type", value: "posts"}
     create: true 
     fields: 
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Weight", name: "weight", widget: "string"}
+      - {label: "Weight", name: "weight", widget: "number"}
+      - {label: "Type", name: "type", widget: "string", widget: "hidden", default: "posts"}
       - {label: "Body", name: "body", widget: "markdown"}
     
