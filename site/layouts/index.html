@@ -3,7 +3,7 @@
 <h1>Fruitful</h1>
 <p>A place to learn from both productive and unproductive disagreements.</p>
 
-<div class="row pr-1 display-none">
+<div class="row pr-1 d-none">
 	{{ range where $.Site.RegularPages "Section" "topics" }}
 		{{ partial "topic-card" . }}
 	{{ end }}
