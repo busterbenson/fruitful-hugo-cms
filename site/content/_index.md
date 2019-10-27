@@ -1,9 +1,3 @@
 ---
-title: Introduction
-type: docs
-bookToc: false
+title: Home
 ---
-
-# Introduction 
-
-This is Fruitful. 

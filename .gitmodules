@@ -4,3 +4,6 @@
 [submodule "site/themes/book"]
 	path = site/themes/book
 	url = https://github.com/alex-shpak/hugo-book
+[submodule "site/themes/vanilla-bootstrap-hugo-theme"]
+	path = site/themes/vanilla-bootstrap-hugo-theme
+	url = https://github.com/zwbetz-gh/vanilla-bootstrap-hugo-theme.git

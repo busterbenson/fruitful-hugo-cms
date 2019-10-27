@@ -1,7 +1,7 @@
 ---
 title: Updates
-weight: 2
+weight: 1
 bookHidden: true
 ---
 
-This.
+Updates
