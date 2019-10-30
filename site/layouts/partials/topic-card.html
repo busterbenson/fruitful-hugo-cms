@@ -2,7 +2,11 @@
 	<div class="card">
 		<div class="card-body">
 			<div class="card-text">
-				<a href="{{ .URL }}">{{ .Title }}</a>
+				{{ if .Params.link }}
+					<a href="{{ .Params.link }}" target="_new">{{ .Title }}</a>
+				{{ else }}
+					<a href="{{ .URL }}">{{ .Title }}</a>
+				{{ end }}
 			</div>
 		</div>
 	</div>

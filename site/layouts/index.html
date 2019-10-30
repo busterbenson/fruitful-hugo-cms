@@ -1,9 +1,12 @@
 {{ define "main" }}
 
 <h1>Fruitful</h1>
-<p>A place to learn from both productive and unproductive disagreements.</p>
+<h3>A place to learn from both productive and unproductive disagreements.</h3>
 
-<div class="row pr-1 d-none">
+<div class="mt-5 mb-2">
+	Examples:
+</div>
+<div class="row">
 	{{ range where $.Site.RegularPages "Section" "topics" }}
 		{{ partial "topic-card" . }}
 	{{ end }}
