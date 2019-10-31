@@ -1,14 +1,11 @@
 {{ define "main" }}
 
 <h1>Fruitful</h1>
-<h3>A place to learn from both productive and unproductive disagreements.</h3>
+<h3>A directory of productive and unproductive disagreements.</h3>
 
-<div class="mt-5 mb-2">
-	Examples:
-</div>
-<div class="row">
-	{{ range where $.Site.RegularPages "Section" "topics" }}
-		{{ partial "topic-card" . }}
+<div class="row mt-5">
+	{{ range .Params.examples }}
+		{{partial "topic-card" . }}
 	{{ end }}
 </div>
 

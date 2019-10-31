@@ -1,13 +1,19 @@
-<div class="col-12 col-sm-4 pr-1">
+<div class="col-12 col-sm-4 pr-3 mb-3">
 	<div class="card">
 		<div class="card-body">
-			<div class="card-text">
-				{{ if .Params.link }}
-					<a href="{{ .Params.link }}" target="_new">{{ .Title }}</a>
-				{{ else }}
-					<a href="{{ .URL }}">{{ .Title }}</a>
+			{{ if .link }}
+				<div class="card-title">
+					<h4><a href="{{ .link }}" target="_new">{{ .title }}</a></h4>
+				</div>
+			{{ end }}
+			{{ if ne .participants nil }}
+				{{ if ( gt ( len .participants ) 0 ) }}
+					<div class="card-text small mb-2">By {{ delimit .participants ", " }}</div>
 				{{ end }}
-			</div>
+			{{ end}}
+			{{ if .desc }}
+				<div class="card-text">{{ .desc }}</div>
+			{{ end }}
 		</div>
 	</div>
 </div>
