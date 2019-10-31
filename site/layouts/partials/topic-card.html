@@ -11,6 +11,11 @@
 					<div class="card-text small mb-2">By {{ delimit .participants ", " }}</div>
 				{{ end }}
 			{{ end}}
+			{{ if ne .curators nil }}
+				{{ if ( gt ( len .curators ) 0 ) }}
+					<div class="card-text small mb-2">Curated by {{ delimit .curators ", " }}</div>
+				{{ end }}
+			{{ end}}
 			{{ if .desc }}
 				<div class="card-text">{{ .desc }}</div>
 			{{ end }}
